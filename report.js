@@ -8,7 +8,7 @@
 const queryString = window.location.href;
 var foundToken = false;
 
-if (localStorage.getItem("196b95d9-c2bb-4549-8ee0-128a264df39f") == null) {
+if (localStorage.getItem("196b95d9-c2bb-4549-8ee0-128a264df39f") != null) {
     foundToken = true;
     document.getElementById('machine-name').textContent = "Machine name: FSQR12";
     document.getElementById('condition').textContent = "Please select machine condition:";
