@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Intern {QR code}</title>
+</head>
+
+<body>
+    <style>
+        h1{
+            color: black;
+        }
+        span{
+            color: red;
+        }
+    </style>
+    <h1>Machine Name: <span> fsf876A</span></h1>
+    <form>
+        <p>Please Select Machine Condition:</p>
+        <input type="radio" name="condition" value="down" id="option-1" required>
+        <label for="option-1">DOWN</label>
+        <input type="radio" name="condition" value="limping" id="option-2" required>
+        <label for="option-2">LIMPING</label>
+        <input type="radio" name="condition" value="up" id="option-3" required>
+        <label for="option-3">UP</label>
+        <br><br>
+        <label for="details">Details:</label><br>
+        <textarea name="details" id="details" cols="30" rows="10"
+            placeholder="e.g: How did you notice the machine was not working?" required></textarea>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
