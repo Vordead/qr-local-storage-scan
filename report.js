@@ -8,7 +8,7 @@
 const queryString = window.location.href;
 var foundToken = false; //to be used later
 
-if (localStorage.getItem("196b95d9-c2bb-4549-8ee0-128a264df39f") != null) {
+if (localStorage.getItem("196b95d9-c2bb-4549-8ee0-128a264df39f") == null) {
     foundToken = true;
     window.location = "report.html";
 } else {
