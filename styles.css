@@ -1,0 +1,104 @@
+body,
+ul,
+li,
+h1,
+h2,
+a {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+header {
+    background-color: #00aeff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+nav {
+    background-color: #F4F4F4;
+    padding: 20px;
+    position: sticky;
+    top: 104px;
+}
+
+nav ul {
+    white-space: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav li {
+    width: 50%;
+    text-align: center;
+    display: inline-block;
+    font-size: 24px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #4B4B4B;
+}
+
+nav li a.join {
+    color: #F63232;
+}
+
+main {
+    max-width: 960px;
+    margin: 120px auto;
+    padding: 0 10%;
+    box-sizing: border-box;
+}
+
+main h1 {
+    text-align: center;
+}
+
+main form div {
+    text-align: center;
+}
+
+.label {
+    margin-right: 1.3em;
+}
+
+h1 {
+    color: black;
+}
+
+span {
+    color: red;
+}
+
+header h1 {
+    color: white;
+    border: 8px solid white;
+    padding: 6px 12px;
+    display: inline-block;
+    border-radius: 36px;
+}
+
+form input {
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 28px;
+    border: 4px solid white;
+}
+
+input {
+    color: white;
+    background-color: #00aeff;
+    border-radius: 60px;
+    border-color: #4b4b4b;
+}
+
+.submit-button {
+    border: 1px solid rgb(0, 0, 0);
+}
