@@ -1,5 +1,6 @@
-const handleSubmit = () => {
-    // e.preventDefault();
+const handleSubmit = (e) => {
+    console.log("test")
+    e.preventDefault();
     const form_request = {
         "equipmentId": parseInt(document.getElementById("equipment-id").innerText),
         "createdById": parseInt(localStorage.getItem("196b95d9-c2bb-4549-8ee0-128a264df39f")),
