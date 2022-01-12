@@ -20,20 +20,40 @@
 
 
     <main>
-        <h1>Machine Name: <span> fsf876A</span></h1>
-        <form>
+        <h1>Equipment ID: <span id="equipment-id"> 84243</span></h1>
+        <script src="/api/post_form_api.js"></script>
+        <form id="report-form" onsubmit="method1()">
             <div>
                 <p>Please Select Machine Condition:</p>
-                <input type="radio" name="condition" value="down" id="option-1" required>
+                <input type="radio" name="condition" value=1 id="radio-down" required>
                 <label class="label" for="option-1">DOWN</label>
-                <input type="radio" name="condition" value="limping" id="option-2" required>
+                <input type="radio" name="condition" value=2 id="radio-limping" required>
                 <label class="label" for="option-2">LIMPING</label>
-                <input type="radio" name="condition" value="up" id="option-3" required>
+                <input type="radio" name="condition" value=3 id="radio-up" required>
                 <label class="label" for="option-3">UP</label>
                 <br><br>
                 <label for="details">Details:</label><br>
-                <textarea name="details" id="details" cols="30" rows="10" placeholder="e.g: How did you notice the machine was not working?" required></textarea>
+
+                <textarea name="details" class="description" id="description" cols="30" rows="10" placeholder="e.g: How did you notice the machine was not working?" required></textarea>
+                <br><br>
+                <label for="priority">Priority:</label>
+
+                <select name="priority" id="priority" required>
+                    <option value="critical">Critical (Fix Immediately)</option>
+                    <option value="urgent">Urgent (Fix Next)</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                    <option value="preventive-maintenance">Preventive Maintenance</option>
+                    <option value="special-project">Special Project</option>
+
+                </select><br><br>
+                <label for="checkbox">Safety Issue:</label><br>
                 <br>
+                <label class="switch">
+                    <input type="checkbox" id="safe-issue" name="safe-issue">
+                    <span class="slider round"></span>
+                </label><br><br><br>
                 <input class="submit-button" type="submit" value="Submit">
             </div>
         </form>
