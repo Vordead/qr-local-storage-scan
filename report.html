@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
     <title>Intern {QR code}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
@@ -20,17 +21,18 @@
 
 
     <main>
-        <h1>Equipment ID: <span id="equipment-id"> 84243</span></h1>
-        <script src="api/post_form_api.js"></script>
-        <form id="report-form" onsubmit="return handleSubmit()">
-            <div>
+        <h1>Equipment ID: <span id="equipment-id"> 84243</span></h1><br>
+        <form action="https://phoneservices.azurewebsites.net/api/WorkOrders?code=bP3n9xcaKQ/l5xPKNjS5r1nT/EwgWImkj6WfDHwDZbWE5UBH220sAg==" , method="post" id="report-form">
+            <div class="form-body">
+
                 <p>Please Select Machine Condition:</p>
+
                 <input type="radio" name="condition" value=1 id="radio-down" required>
-                <label class="label" for="option-1">DOWN</label>
+                <label class="label option-1" for="option-1">DOWN</label>
                 <input type="radio" name="condition" value=2 id="radio-limping" required>
-                <label class="label" for="option-2">LIMPING</label>
+                <label class="label option-2" for="option-2">LIMPING</label>
                 <input type="radio" name="condition" value=3 id="radio-up" required>
-                <label class="label" for="option-3">UP</label>
+                <label class="label option-3" for="option-3">UP</label>
                 <br><br>
                 <label for="details">Details:</label><br>
 
@@ -54,7 +56,11 @@
                     <input type="checkbox" id="safe-issue" name="safe-issue">
                     <span class="slider round"></span>
                 </label><br><br><br>
-                <input class="submit-button" type="submit" value="Submit">
+                <script src="api/post_form_api.js"></script>
+
+                <button id="submit-button" class="button" type="submit">Submit</button>
+
+
             </div>
         </form>
     </main>
