@@ -23,7 +23,7 @@ const handleSubmit = () => {
         .then(response => response.text())
         .then(result => {
             console.log(result)
-            alert("The form was submitted "+result)
+            alert("The form was submitted: " + result)
         }
         )
         .catch(error => {
