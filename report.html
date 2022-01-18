@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <h1>Masterminds</h1>
     </header>
     <nav class="main-nav">
@@ -17,7 +17,7 @@
             <li><a href="/join.html" class="join">Contact IT</a></li>
             <li><a href="/faq.html" class="faq">FAQ</a></li>
         </ul>
-    </nav>
+    </nav> -->
 
 
     <main>
@@ -26,21 +26,39 @@
                 </script>
             </span></h1><br>
 
-        <form action="https://phoneservices.azurewebsites.net/api/WorkOrders?code=bP3n9xcaKQ/l5xPKNjS5r1nT/EwgWImkj6WfDHwDZbWE5UBH220sAg==" , method="post" id="report-form">
+        <form id="myForm">
             <div class="form-body">
 
                 <p>Please Select Machine Condition:</p>
+                <div class="test">
 
-                <input type="radio" name="condition" value=1 id="radio-down" required>
-                <label class="label option-1" for="option-1">DOWN</label>
-                <input type="radio" name="condition" value=2 id="radio-limping" required>
-                <label class="label option-2" for="option-2">LIMPING</label>
-                <input type="radio" name="condition" value=3 id="radio-up" required>
-                <label class="label option-3" for="option-3">UP</label>
-                <br><br>
+                    <ul>
+
+                        <li>
+
+
+                            <input type="radio" name="condition" value=1 id="radio-down" required>
+                            <label class="label option-1" for="option-1">DOWN</label>
+                        </li>
+                        <li>
+
+                            <input type="radio" name="condition" value=2 id="radio-limping" required>
+                            <label class="label option-2" for="option-2">LIMPING</label>
+                        </li>
+                        <li>
+
+                            <input type="radio" name="condition" value=3 id="radio-up" required>
+                            <label class="label option-3" for="option-3">UP</label>
+                        </li>
+
+                        <br><br>
+
+                    </ul>
+                </div>
+
                 <label for="details">Description:</label><br>
-
-                <textarea name="details" class="description" id="description" cols="30" rows="10" placeholder="e.g: How did you notice the machine was not working?" required></textarea>
+                <textarea name="details" class="description" id="description" cols="30" rows="10"
+                    placeholder="e.g: How did you notice the machine was not working?" required></textarea>
                 <br><br>
                 <label for="priority">Priority:</label>
 
@@ -66,6 +84,14 @@
 
 
             </div>
+            <script>
+                const form = document.getElementById("myForm");
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    handleSubmit();
+                });
+            </script>
         </form>
     </main>
 </body>

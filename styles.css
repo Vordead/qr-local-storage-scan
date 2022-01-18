@@ -9,7 +9,10 @@ a {
     font-family: arial;
 }
 
-header {
+
+/*  removed content */
+
+/* header {
     background-color: #00aeff;
     padding: 20px 0;
     text-align: center;
@@ -47,7 +50,23 @@ nav li a {
 
 nav li a.join {
     color: #F63232;
+} */
+
+.test{
+    display: flex;
+    /* background: #00aeff; */
+    justify-content:center ;
 }
+
+
+ul {
+    margin-right: 140px;
+    list-style-type: none;
+    text-align: start;
+    min-width: 105px;
+    /* background: #006eff; */
+}
+
 
 main {
     max-width: 960px;
