@@ -21,6 +21,13 @@ const handleSubmit = () => {
 
     fetch("https://phoneservices.azurewebsites.net/api/WorkOrders?code=bP3n9xcaKQ/l5xPKNjS5r1nT/EwgWImkj6WfDHwDZbWE5UBH220sAg==", requestOptions)
         .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
+        .then(result => {
+            console.log(result)
+            alert("The form was submitted "+result)
+        }
+        )
+        .catch(error => {
+            console.log('error', error)
+            alert(error)
+        });
 }
