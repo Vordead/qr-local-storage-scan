@@ -29,4 +29,3 @@ if (localStorage.getItem("196b95d9-c2bb-4549-8ee0-128a264df39f") != null) {
     document.getElementById('h1').textContent = "Unrecognized user!";
     document.getElementById('h2').textContent = "Please refer to IT";
 }
-

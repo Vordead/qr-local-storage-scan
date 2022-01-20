@@ -5,7 +5,7 @@ const handleSubmit = () => {
     var raw = JSON.stringify({
         "equipmentId": parseInt(document.getElementById("equipment-id").innerText),
         "createdById": parseInt(localStorage.getItem("196b95d9-c2bb-4549-8ee0-128a264df39f")),
-        "title": document.getElementById("priority").value,
+        "title": document.querySelector('input[name="priority"]:checked').value,
         "description": document.querySelector('textarea').value,
         "isSafetyIssue": document.getElementById('safe-issue').checked,
         "equipmentConditionId": document.querySelector('input[name="condition"]:checked').value,

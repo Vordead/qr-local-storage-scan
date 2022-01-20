@@ -9,17 +9,6 @@
 </head>
 
 <body>
-    <!-- <header>
-        <h1>Masterminds</h1>
-    </header>
-    <nav class="main-nav">
-        <ul>
-            <li><a href="/join.html" class="join">Contact IT</a></li>
-            <li><a href="/faq.html" class="faq">FAQ</a></li>
-        </ul>
-    </nav> -->
-
-
     <main>
         <h1>Equipment ID: <span id="equipment-id">
                 <script src="display-equipment-id.js">
@@ -30,13 +19,9 @@
             <div class="form-body">
 
                 <p>Please Select Machine Condition:</p>
-                <div class="test">
-
+                <div class="radio-conditions">
                     <ul>
-
                         <li>
-
-
                             <input type="radio" name="condition" value=1 id="radio-down" required>
                             <label class="label option-1" for="option-1">DOWN</label>
                         </li>
@@ -61,17 +46,47 @@
                     placeholder="e.g: How did you notice the machine was not working?" required></textarea>
                 <br><br>
                 <label for="priority">Priority:</label>
+                <div class="radio-conditions">
+                    <ul>
+                        <li>
+                            <input type="radio" name="priority" value="critical" id="radio-critical" required>
+                            <label class="label option-1" for="option-1">Critical (Fix Immediately)</label>
+                        </li><br>
+                        <li>
 
-                <select name="priority" id="priority" required>
-                    <option value="critical">Critical (Fix Immediately)</option>
-                    <option value="urgent">Urgent (Fix Next)</option>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                    <option value="preventive-maintenance">Preventive Maintenance</option>
-                    <option value="special-project">Special Project</option>
+                            <input type="radio" name="priority" value="urgent" id="radio-urgent" required>
+                            <label class="label option-2" for="option-2">Urgent (Fix Next)</label>
+                        </li><br>
+                        <li>
 
-                </select><br><br>
+                            <input type="radio" name="priority" value="high" id="radio-high" required>
+                            <label class="label option-3" for="option-3">High</label>
+                        </li><br>
+                        <li>
+
+                            <input type="radio" name="priority" value="medium" id="radio-medium" required>
+                            <label class="label option-3" for="option-3">Medium</label>
+                        </li><br>
+                        <li>
+
+                            <input type="radio" name="priority" value="low" id="radio-low" required>
+                            <label class="label option-3" for="option-3">Low</label>
+                        </li><br>
+                        <li>
+
+                            <input type="radio" name="priority" value="preventive-maintenance" id="radio-preventive-maintenance" required>
+                            <label class="label option-3" for="option-3">Preventive Maintenance</label>
+                        </li><br>
+                        <li>
+
+                            <input type="radio" name="priority" value="special-project" id="radio-special-project" required>
+                            <label class="label option-3" for="option-3">Special Project</label>
+                        </li>
+
+                        <br><br>
+
+                    </ul>
+                </div>
                 <label for="checkbox">Safety Issue:</label><br>
                 <br>
                 <label class="switch">
@@ -82,13 +97,11 @@
 
                 <button id="submit-button" class="button" type="submit">Submit</button>
 
-
             </div>
             <script>
                 const form = document.getElementById("myForm");
                 form.addEventListener("submit", function (event) {
                     event.preventDefault();
-
                     handleSubmit();
                 });
             </script>
