@@ -3,25 +3,27 @@ ul,
 li,
 h1,
 h2,
-a {
+a,
+p {
     margin: 0;
     padding: 0;
     font-family: arial;
 }
 
-
-.radio-conditions{
-    display: flex;
-    justify-content:center ;
+html {
+    scroll-behavior: smooth;
 }
 
+.radio-conditions {
+    display: flex;
+    justify-content: center;
+}
 
 ul {
     list-style-type: none;
     text-align: start;
     min-width: 105px;
 }
-
 
 main {
     max-width: 960px;
@@ -36,6 +38,7 @@ main h1 {
 
 main form div {
     text-align: center;
+    /* padding-left: 20px; */
 }
 
 .label {
@@ -75,10 +78,17 @@ button {
 }
 
 textarea {
+    font-size: 1.5em;
+    width: 90%;
     resize: none;
     border-radius: 12px;
     border: 2px dashed;
     outline-style: none;
+}
+
+.details-label {
+    justify-content: start;
+    font-size: 1.5em;
 }
 
 
@@ -90,7 +100,7 @@ textarea {
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
+    width: 120px;
     height: 34px;
 }
 
@@ -139,9 +149,9 @@ input:focus+.slider {
 }
 
 input:checked+.slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    transform: translateX(85px);
 }
 
 
@@ -155,14 +165,18 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
-div.form-body {
+div.custom-border {
     border: 2px solid #4B4B4B;
     border-radius: 20px;
+    text-align: start;
+    padding: 10px 10px;
+}
+
+div.form-body {
     /* color: #fff; */
     display: block;
     font-family: inherit;
     font-size: 16px;
-    padding: 10px;
 }
 
 .button {
@@ -177,7 +191,7 @@ div.form-body {
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: #00aeff;
+    background-color: #25bb00;
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
@@ -198,6 +212,11 @@ p {
     font-weight: bold;
 }
 
+.title,
+p {
+    font-size: 1.5em;
+}
+
 .option-1 {
     color: #F63232;
 }
@@ -208,4 +227,8 @@ p {
 
 .option-3 {
     color: green;
+}
+
+.label-option-4 {
+    color: black;
 }

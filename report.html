@@ -11,96 +11,125 @@
 <body>
     <main>
         <h1>Equipment ID: <span id="equipment-id">
-                <script src="display-equipment-id.js">
-                </script>
+            
             </span></h1><br>
 
         <form id="myForm">
             <div class="form-body">
+                <div class="custom-border">
 
-                <p>Please Select Machine Condition:</p>
-                <div class="radio-conditions">
-                    <ul>
-                        <li>
-                            <input type="radio" name="condition" value=1 id="radio-down" required>
-                            <label class="label option-1" for="option-1">DOWN</label>
+                    <div class="the-safety-issue">
+
+
+                        <label class="title" for="checkbox">Is this a safety issue?</label><br>
+
+                        <br>
+                        <label class="switch">
+                            <input type="checkbox" id="safe-issue" name="safe-issue">
+                            <span class="slider round"></span>
+                    </div>
+                    <br>
+                </div>
+                <br>
+                <div class="custom-border">
+                    <p>Machine Condition:</p>
+                    <div class="radio-conditions">
+                        <ul>
+                            <li>
+                                <input type="radio" name="condition" value=3 id="radio-up" required>
+                                <label class="label option-3" for="option-3">👍 Up</label>
                         </li>
+
                         <li>
 
                             <input type="radio" name="condition" value=2 id="radio-limping" required>
-                            <label class="label option-2" for="option-2">LIMPING</label>
+                            <label class="label option-2" for="option-2">🤞 Limping</label>
                         </li>
                         <li>
-
-                            <input type="radio" name="condition" value=3 id="radio-up" required>
-                            <label class="label option-3" for="option-3">UP</label>
-                        </li>
-
-                        <br><br>
-
-                    </ul>
-                </div>
-
-                <label for="details">Description:</label><br>
-                <textarea name="details" class="description" id="description" cols="30" rows="10"
-                    placeholder="e.g: How did you notice the machine was not working?" required></textarea>
-                <br><br>
-                <label for="priority">Priority:</label>
-                <div class="radio-conditions">
-                    <ul>
-                        <li>
-                            <input type="radio" name="priority" value="critical" id="radio-critical" required>
-                            <label class="label option-1" for="option-1">Critical (Fix Immediately)</label>
-                        </li><br>
-                        <li>
-
-                            <input type="radio" name="priority" value="urgent" id="radio-urgent" required>
-                            <label class="label option-2" for="option-2">Urgent (Fix Next)</label>
-                        </li><br>
-                        <li>
-
-                            <input type="radio" name="priority" value="high" id="radio-high" required>
-                            <label class="label option-3" for="option-3">High</label>
-                        </li><br>
-                        <li>
-
-                            <input type="radio" name="priority" value="medium" id="radio-medium" required>
-                            <label class="label option-3" for="option-3">Medium</label>
-                        </li><br>
-                        <li>
-
-                            <input type="radio" name="priority" value="low" id="radio-low" required>
-                            <label class="label option-3" for="option-3">Low</label>
-                        </li><br>
-                        <li>
-
-                            <input type="radio" name="priority" value="preventive-maintenance" id="radio-preventive-maintenance" required>
-                            <label class="label option-3" for="option-3">Preventive Maintenance</label>
-                        </li><br>
-                        <li>
-
-                            <input type="radio" name="priority" value="special-project" id="radio-special-project" required>
-                            <label class="label option-3" for="option-3">Special Project</label>
+                            <input type="radio" name="condition" value=1 id="radio-down" required>
+                            <label class="label option-1" for="option-1">👎 Down</label>
                         </li>
 
                         <br><br>
 
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
-                <label for="checkbox">Safety Issue:</label><br>
                 <br>
-                <label class="switch">
-                    <input type="checkbox" id="safe-issue" name="safe-issue">
-                    <span class="slider round"></span>
-                </label><br><br><br>
+
+                <div class="custom-border">
+                    <label class="title" for="priority">Priority:</label>
+                    <div class="radio-conditions">
+                        <ul>
+                            <li>
+                                <input type="radio" name="priority" value="critical" id="radio-critical" required>
+                                <label class="label option-1" for="option-1">Critical (Fix Immediately)</label>
+                            </li>
+                            <li>
+
+                                <input type="radio" name="priority" value="urgent" id="radio-urgent" required>
+                                <label class="label option-2" for="option-2">Urgent (Fix Next)</label>
+                            </li>
+                            <li>
+
+                                <input type="radio" name="priority" value="high" id="radio-high" required>
+                                <label class="label option-4" for="option-3">High</label>
+                            </li>
+                            <li>
+
+                                <input type="radio" name="priority" value="medium" id="radio-medium" required>
+                                <label class="label option-4" for="option-3">Medium</label>
+                            </li>
+                            <li>
+
+                                <input type="radio" name="priority" value="low" id="radio-low" required>
+                                <label class="label option-4" for="option-3">Low</label>
+                            </li>
+                            <li>
+
+                                <input type="radio" name="priority" value="preventive-maintenance" id="radio-preventive-maintenance" required>
+                                <label class="label option-4" for="option-3">Preventive Maintenance</label>
+                            </li>
+                            <li>
+
+                                <input type="radio" name="priority" value="special-project" id="radio-special-project" required>
+                                <label class="label option-4" for="option-3">Special Project</label>
+                            </li>
+
+                            <br><br>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+                <br>
+                </label class="title">
+                <div class="custom-border">
+                    <div class="description-div">
+
+                        <label class="details-label title" for="details">Problem Description:</label><br>
+                        <textarea name="details" class="description" id="description" cols="30" rows="10" placeholder="e.g: How did you notice the machine was not working?" required></textarea>
+                    </div><br>
+
+                </div>
+                <br><br><br>
                 <script src="api/post_form_api.js"></script>
 
                 <button id="submit-button" class="button" type="submit">Submit</button>
 
             </div>
             <script>
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        document.querySelector(this.getAttribute('href')).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    });
+                });
                 const form = document.getElementById("myForm");
-                form.addEventListener("submit", function (event) {
+                form.addEventListener("submit", function(event) {
                     event.preventDefault();
                     handleSubmit();
                 });

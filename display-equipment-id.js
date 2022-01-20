@@ -1,1 +1,0 @@
-document.getElementById('equipment-id').innerHTML = localStorage.getItem('equipment-id');
