@@ -14,6 +14,55 @@ html {
     scroll-behavior: smooth;
 }
 
+header {
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.company-title {
+    color: white;
+    border: 8px solid #fff;
+    padding: 6px 12px;
+    display: inline-block;
+    border-radius: 36px;
+}
+
+main {
+    margin: 20px auto;
+    padding: 0 3%;
+    box-sizing: border-box;
+    text-align: center;
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 10%;
+    box-sizing: border-box;
+}
+
+
+/* Unrecognized */
+
+.unrecognized-user-header {
+    background-color: #00aeff;
+}
+
+main h1 {
+    text-align: center;
+}
+
+
+/* Report Form */
+
+.equipment-id-border {
+    color: white;
+    border: 8px solid #00aeff;
+    padding: 6px 12px;
+    display: inline-block;
+    border-radius: 36px;
+}
+
 .radio-conditions {
     display: flex;
     justify-content: center;
@@ -23,22 +72,6 @@ ul {
     list-style-type: none;
     text-align: start;
     min-width: 105px;
-}
-
-main {
-    max-width: 960px;
-    margin: 20px auto;
-    padding: 0 10%;
-    box-sizing: border-box;
-}
-
-main h1 {
-    text-align: center;
-}
-
-main form div {
-    text-align: center;
-    /* padding-left: 20px; */
 }
 
 .label {
@@ -53,33 +86,6 @@ span {
     color: red;
 }
 
-header {
-    padding: 20px 0;
-    text-align: center;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-
-header h1 {
-    color: white;
-    border: 8px solid #00aeff;
-    padding: 6px 12px;
-    display: inline-block;
-    border-radius: 36px;
-}
-
-main {
-    margin: 20px auto;
-    padding: 0 3%;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-main h1 {
-    text-align: center;
-}
-
 .thumbs {
     font-size: 3em;
 }
@@ -88,17 +94,17 @@ form input {
     margin: 20px 0;
     padding: 10px 20px;
     font-size: 24px;
-    border-radius: 28px;
-    border: 4px solid white;
 }
 
-input,
 button {
     color: white;
     background-color: #00aeff;
     border-radius: 60px;
     border-color: #4b4b4b;
 }
+
+
+/* Desciption textarea*/
 
 textarea {
     font-size: 1.5em;
@@ -109,9 +115,26 @@ textarea {
     outline-style: none;
 }
 
-.details-label {
-    justify-content: start;
+.title,
+p {
     font-size: 1.5em;
+}
+
+label,
+p {
+    font-weight: bold;
+}
+
+.option-red {
+    color: #F63232;
+}
+
+.option-orange {
+    color: orange;
+}
+
+.option-green {
+    color: green;
 }
 
 
@@ -201,6 +224,9 @@ div.form-body {
     font-size: 16px;
 }
 
+
+/* Submit Button */
+
 .button {
     width: 75%;
     padding: inherit;
@@ -227,30 +253,4 @@ div.form-body {
     background-color: #006eff;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-}
-
-label,
-p {
-    font-weight: bold;
-}
-
-.title,
-p {
-    font-size: 1.5em;
-}
-
-.option-1 {
-    color: #F63232;
-}
-
-.option-2 {
-    color: orange;
-}
-
-.option-3 {
-    color: green;
-}
-
-.label-option-4 {
-    color: black;
 }

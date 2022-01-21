@@ -1,16 +1,6 @@
-//the key of the token
-//196b95d9-c2bb-4549-8ee0-128a264df39f
-
-//the value of the token
-//8e102823-bb14-451a-bdd6-65d7d7a8919b
-
-
-
 const queryString = window.location.href;
-
+//196b95d9-c2bb-4549-8ee0-128a264df39f is the key in local storage,
 if (localStorage.getItem("196b95d9-c2bb-4549-8ee0-128a264df39f") != null) {
-    foundToken = true;
-    console.log(queryString);
     var index;
     for (let i = 0; i < queryString.length; i++) {
         console.log(queryString[i]);
@@ -21,7 +11,6 @@ if (localStorage.getItem("196b95d9-c2bb-4549-8ee0-128a264df39f") != null) {
         }
     }
     var equipment_id = queryString.substring(index + 1);
-    console.log(equipment_id);
     window.location = "report.html?id=" + equipment_id;
 } else {
     document.getElementById('h1').textContent = "Unrecognized user!";
