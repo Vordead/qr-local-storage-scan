@@ -30,8 +30,7 @@
                 console.log(result);
                 console.log('test')
                 console.log(jsonResponse['title'])
-
-                document.getElementById('equipment-id').innerHTML = result['title'];
+                document.getElementById('equipment-id').innerHTML = jsonResponse['title'];
             })
             .catch(error => {
                 console.log('error', error);
@@ -192,7 +191,8 @@
                         .then(response => response.text())
                         .then(result => {
                             console.log(result)
-                            alert("The form was submitted: " + result)
+                            var jsonResponse = JSON.parse(result);
+                            alert("The form was submitted successfully\nworkOrderId: " + jsonResponse['workOrderId'] + "\nstatus: " + jsonResponse['status']);
                         })
                         .catch(error => {
                             console.log('error', error)
