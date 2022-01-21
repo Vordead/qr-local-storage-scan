@@ -26,6 +26,7 @@
         fetch("https://phoneservices.azurewebsites.net/api/equipment?code=yMYfkKhLd/SVVDNdTuKCKRj0d973Wd2UurFka1IwPvD04W9ACd1hEA==&id=" + equipment_id, requestOptions)
             .then(response => response.text())
             .then(result => {
+                JSON.parse(result);
                 console.log(result);
                 console.log('test')
                 console.log(result['title'])
