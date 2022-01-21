@@ -191,7 +191,6 @@ input:checked+.slider:before {
 div.custom-border {
     border: 2px solid #4B4B4B;
     border-radius: 20px;
-    text-align: start;
     padding: 10px 10px;
 }
 
