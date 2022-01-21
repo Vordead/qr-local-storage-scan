@@ -53,12 +53,35 @@ span {
     color: red;
 }
 
+header {
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
 header h1 {
     color: white;
-    border: 8px solid white;
+    border: 8px solid #00aeff;
     padding: 6px 12px;
     display: inline-block;
     border-radius: 36px;
+}
+
+main {
+    margin: 20px auto;
+    padding: 0 3%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+main h1 {
+    text-align: center;
+}
+
+.thumbs {
+    font-size: 3em;
 }
 
 form input {

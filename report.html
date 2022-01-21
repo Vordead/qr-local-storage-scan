@@ -38,9 +38,11 @@
 
 <body>
     <main>
-        <h1>Equipment ID: <span id="equipment-id">
-            
-            </span></h1><br>
+
+        <header>
+
+            <h1 class="equipment-id-border"><span id="equipment-id">Loading...</span></h1><br>
+        </header>
 
         <form id="myForm">
             <div class="form-body">
@@ -65,17 +67,18 @@
                         <ul>
                             <li>
                                 <input type="radio" name="condition" value=1 id="radio-up" required>
-                                <label class="label option-3" for="option-3">👍 Up</label>
+                                <label class="label option-3" for="option-3"><span class="thumbs">👍</span> Up</label>
                         </li>
 
                         <li>
 
                             <input type="radio" name="condition" value=2 id="radio-limping" required>
-                            <label class="label option-2" for="option-2">🤞 Limping</label>
+                            <label class="label option-2" for="option-2"><span class="thumbs">🤞</span>
+                                    Limping</label>
                         </li>
                         <li>
                             <input type="radio" name="condition" value=3 id="radio-down" required>
-                            <label class="label option-1" for="option-1">👎 Down</label>
+                            <label class="label option-1" for="option-1"><span class="thumbs">👎</span> Down</label>
                         </li>
 
                         <br><br>
