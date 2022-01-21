@@ -27,7 +27,10 @@
             .then(response => response.text())
             .then(result => {
                 console.log(result);
-                document.getElementById('equipment-id').innerHTML = result;
+                console.log('test')
+                console.log(result['title'])
+
+                document.getElementById('equipment-id').innerHTML = result['title'];
             })
             .catch(error => {
                 console.log('error', error);
