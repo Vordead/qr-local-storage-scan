@@ -118,7 +118,7 @@
                     redirect: 'follow'
                 };
                 //GET and display equipment name with ID
-                fetch(`https://phoneservices.azurewebsites.net/api/equipment?id=${equipment_id}&code=yMYfkKhLd/SVVDNdTuKCKRj0d973Wd2UurFka1IwPvD04W9ACd1hEA==` + equipment_id, requestOptions)
+                fetch(`https://phoneservices.azurewebsites.net/api/equipment?id=${equipment_id}&code=yMYfkKhLd/SVVDNdTuKCKRj0d973Wd2UurFka1IwPvD04W9ACd1hEA==`, requestOptions)
                     .then(response => response.text())
                     .then(result => {
                         var jsonResponse = JSON.parse(result);
