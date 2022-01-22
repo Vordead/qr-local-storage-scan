@@ -52,6 +52,14 @@ main h1 {
     text-align: center;
 }
 
+h1 {
+    color: black;
+}
+
+span {
+    color: red;
+}
+
 
 /* Report Form */
 
@@ -78,43 +86,6 @@ ul {
     margin-right: 1.3em;
 }
 
-h1 {
-    color: black;
-}
-
-span {
-    color: red;
-}
-
-.thumbs {
-    font-size: 3em;
-}
-
-form input {
-    margin: 20px 0;
-    padding: 10px 20px;
-    font-size: 24px;
-}
-
-button {
-    color: white;
-    background-color: #00aeff;
-    border-radius: 60px;
-    border-color: #4b4b4b;
-}
-
-
-/* Desciption textarea*/
-
-textarea {
-    font-size: 1.5em;
-    width: 90%;
-    resize: none;
-    border-radius: 12px;
-    border: 2px dashed;
-    outline-style: none;
-}
-
 .title,
 p {
     font-size: 1.5em;
@@ -135,6 +106,28 @@ p {
 
 .option-green {
     color: green;
+}
+
+.thumbs {
+    font-size: 3em;
+}
+
+form input {
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 24px;
+}
+
+
+/* Desciption textarea*/
+
+textarea {
+    font-size: 1.5em;
+    width: 90%;
+    resize: none;
+    border-radius: 12px;
+    border: 2px dashed;
+    outline-style: none;
 }
 
 

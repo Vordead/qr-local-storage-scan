@@ -2,60 +2,21 @@
 <html>
 
 <head>
-
-    <title>Intern {QR code}</title>
+    <title>Cinch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script>
-        const queryString = window.location.href;
-        var index;
-        for (let i = 0; i < queryString.length; i++) {
-            console.log(queryString[i]);
-            if (queryString[i] == "=") {
-                index = i;
-                console.log(index)
-                break;
-            }
-        }
-        var equipment_id = queryString.substring(index + 1);
-        console.log(equipment_id);
-        var requestOptions = {
-            method: 'GET',
-            redirect: 'follow'
-        };
-        fetch("https://phoneservices.azurewebsites.net/api/equipment?code=yMYfkKhLd/SVVDNdTuKCKRj0d973Wd2UurFka1IwPvD04W9ACd1hEA==&id=" + equipment_id, requestOptions)
-            .then(response => response.text())
-            .then(result => {
-                var jsonResponse = JSON.parse(result);
-                console.log(result);
-                console.log('test')
-                console.log(jsonResponse['title'])
-                document.getElementById('equipment-id').innerHTML = jsonResponse['title'];
-            })
-            .catch(error => {
-                console.log('error', error);
-                document.getElementById('equipment-id').innerHTML = result;
-            });
-    </script>
 </head>
 
 <body>
     <main>
-
         <header>
-
             <h1 class="equipment-id-border"><span id="equipment-id">Loading...</span></h1><br>
         </header>
-
         <form id="myForm">
             <div class="form-body">
                 <div class="custom-border">
-
                     <div class="the-safety-issue">
-
-
                         <label class="title" for="checkbox">Is this a safety issue?</label><br>
-
                         <br>
                         <label class="switch">
                             <input type="checkbox" id="safe-issue" name="safe-issue">
@@ -70,22 +31,20 @@
                         <ul>
                             <li>
                                 <input type="radio" name="condition" value=1 id="radio-up" required>
-                                <label class="label option-green" for="radio-up"><span class="thumbs">👍</span> Up</label>
+                                <label class="label option-green" for="radio-up"><span class="thumbs">👍</span>
+                                    Up</label>
                         </li>
-
                         <li>
-
                             <input type="radio" name="condition" value=2 id="radio-limping" required>
                             <label class="label option-orange" for="radio-limping"><span class="thumbs">🤞</span>
                                     Limping</label>
                         </li>
                         <li>
                             <input type="radio" name="condition" value=3 id="radio-down" required>
-                            <label class="label option-red" for="radio-down"><span class="thumbs">👎</span> Down</label>
+                            <label class="label option-red" for="radio-down"><span class="thumbs">👎</span>
+                                    Down</label>
                         </li>
-
                         <br><br>
-
                         </ul>
                     </div>
                 </div>
@@ -100,7 +59,6 @@
                                 <label class="label option-red" for="radio-critical">Critical (Fix Immediately)</label>
                             </li>
                             <li>
-
                                 <input type="radio" name="priority" value="urgent" id="radio-urgent" required>
                                 <label class="label option-orange" for="radio-urgent">Urgent (Fix Next)</label>
                             </li>
@@ -149,23 +107,30 @@
                 </div>
                 <br><br><br>
 
-
                 <button id="submit-button" class="button" type="submit">Submit</button>
 
             </div>
             <script>
-                for (let i = 0; i < queryString.length; i++) {
-                    console.log(queryString[i]);
-                    if (queryString[i] == "=") {
-                        index = i;
-                        console.log(index)
-                        break;
-                    }
-                }
-                var equipment_id = queryString.substring(index + 1);
-                console.log(equipment_id);
+                let params = new URLSearchParams(location.search);
+                var equipment_id = params.get('id')
+                var requestOptions = {
+                    method: 'GET',
+                    redirect: 'follow'
+                };
+                //GET and display equipment name with ID
+                fetch(`http://phoneservices.azurewebsites.net/api/equipment?id=${equipment_id}&code=yMYfkKhLd/SVVDNdTuKCKRj0d973Wd2UurFka1IwPvD04W9ACd1hEA==` + equipment_id, requestOptions)
+                    .then(response => response.text())
+                    .then(result => {
+                        var jsonResponse = JSON.parse(result);
+                        document.getElementById('equipment-id').innerHTML = jsonResponse['title'];
+                    })
+                    .catch(error => {
+                        console.log('error', error);
+                        document.getElementById('equipment-id').innerHTML = result;
+                    });
 
 
+                //Submit Button POST Function
                 const handleSubmit = () => {
                     var myHeaders = new Headers();
                     myHeaders.append("Content-Type", "application/json");
@@ -186,7 +151,6 @@
                         body: raw,
                         redirect: 'follow',
                     };
-                    console.log(raw)
                     fetch("https://phoneservices.azurewebsites.net/api/WorkOrders?code=bP3n9xcaKQ/l5xPKNjS5r1nT/EwgWImkj6WfDHwDZbWE5UBH220sAg==", requestOptions)
                         .then(response => response.text())
                         .then(result => {
@@ -196,13 +160,14 @@
                         })
                         .catch(error => {
                             console.log('error', error)
-                            alert(error)
+                            alert(error);
                         });
                 }
                 const form = document.getElementById("myForm");
                 form.addEventListener("submit", function(event) {
                     event.preventDefault();
                     handleSubmit();
+                    // still need to check for status of form, if 200 clear form else ...
                 });
             </script>
         </form>

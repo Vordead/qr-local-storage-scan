@@ -6,7 +6,6 @@ if (localStorage.getItem("196b95d9-c2bb-4549-8ee0-128a264df39f") != null) {
         console.log(queryString[i]);
         if (queryString[i] == "=") {
             index = i;
-            console.log(index)
             break;
         }
     }
